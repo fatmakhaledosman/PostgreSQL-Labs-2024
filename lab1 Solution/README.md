@@ -18,45 +18,52 @@
 
 ## Entities:
 ### ---------
-## 1. Student
+## 1. Track 
+###     - Tack_ID (Primary key)
+###     - Track_Name
+### --------------------------------------------------------
+## 2. Student
 ###     - Student_ID (Primary key)
 ###     - Name
 ###     - Email
 ###     - Address
-### ---------------------------------------------------------------
-###
-## 2. Phone 
+###     - Tack_ID (Foreign key referencing Track)
+### --------------------------------------------------------
+## 3. Phone 
 ###     - Phone_ID (Primary key)
 ###     - Phone_Number
 ###     - Student_ID (Foreign key referencing Student)
-###  ---------------------------------------------------------------
-###
-## 3. Subject 
+### --------------------------------------------------------
+## 4. Subject 
 ###     - Subject_ID (Primary key)
 ###     - Name
 ###     - Description 
 ###     - Max_Score 
-###  ---------------------------------------------------------------
-###
-## 4. Student_Subject  
+###     - Tack_ID (Foreign key referencing Track)
+### --------------------------------------------------------
+## 5. Student_Subject  
 ###     - Student_ID (Foreign key referencing Student)
 ###     - Subject_ID (Foreign key referencing Subject)
 ###     - PRIMARY KEY (Student_ID, Subject_ID)
-###  ---------------------------------------------------------------
-###
-## 5.Exam 
+### --------------------------------------------------------
+## 6.Exam 
 ###     - Exam_ID (Primary key)
 ###     - Exam_Date
 ###     - Subject_ID (Foreign key referencing Subject)
-###  ---------------------------------------------------------------
-###
-## 6. Exam_Result
+### --------------------------------------------------------
+## 7. Exam_Result
 ###     - Exam_ID (Foreign key referencing Exam)
 ###     - Student_ID (Foreign key referencing Student)
 ###     - Score 
 ###     - PRIMARY KEY (Exam_ID, Student_ID)
-### ---------------------------------------------------------------
-###
+### --------------------------------------------------------
+
+
+
+
+
+
+
 ## 3.Create your mapped tables with their columns in PostgreSQL.
 
 
